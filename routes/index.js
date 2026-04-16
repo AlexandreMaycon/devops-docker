@@ -2,9 +2,12 @@ const express = require('express');
 
 const router = express.Router();
 
-// Define a single route that responds to GET requests
 router.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send("This API is Alex's!");
+});
+
+router.get('/health-check', (req, res) => {
+  res.send('OK, the server is running!');
 });
 
 module.exports = router;
